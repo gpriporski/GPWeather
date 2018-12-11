@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>GPWeather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-grid *ngIf="weather">
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <h2 class="location">Current Location: {{weather.name}}, {{weather.sys.country}}</h2>
+        <div class="icon"> <img src="{{weather.weather[0].icon}}" alt=""> </div>
+        <h3 class="dsc">{{weather.weather[0].main}}</h3>
+        <h1 class="temp">{{weather.main.temp}}&deg;</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <ion-item>
+            <strong>Min/Max for the day:  </strong> {{weather.main.temp_min}}&deg; / {{weather.main.temp_max}}&deg;
+          </ion-item>
+          <ion-item>
+            <strong>Humidity: </strong> {{weather.main.humidity}} %
+          </ion-item>
+          <ion-item>
+            <strong>Pressure: </strong> {{weather.main.pressure}} hPa
+          </ion-item>
+          <ion-item>
+            <strong>Wind Speed: </strong> {{weather.wind.speed}} m/s
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

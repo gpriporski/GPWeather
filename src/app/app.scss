@@ -1,0 +1,36 @@
+.home{
+  background: color($colors, primary);
+  color: color($colors, light);
+  margin-top: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: normal;
+}
+
+.toolbar-title{
+  text-align: center;
+}
+
+.tabs-md .tab-button-icon{
+  color: #ccc;
+}
+
+.temp{
+  font-size: 90px;
+  text-align: center;
+}
+
+.location, .icon, .dsc{
+  text-align: center;
+}
+
+.location{
+  font-size: 40px;
+}
+
+.dsc{
+  font-size: 30px;
+}
+
+strong{
+  font-style: italic;
+}
